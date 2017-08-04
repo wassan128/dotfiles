@@ -19,3 +19,9 @@ set showmatch
 " color
 set background=dark
 set t_Co=256
+
+" vim-go
+call plug#begin()
+Plug 'fatih/vim-go', {'do': ':GoInstallBinaries'}
+call plug#end()
+
