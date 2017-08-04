@@ -20,8 +20,21 @@ set showmatch
 set background=dark
 set t_Co=256
 
-" vim-go
+" customize
+let mapleader="\<Space>"
+"" reload vimrc
+noremap <Leader>r :source ~/.vimrc<CR>:noh<CR>
+
+" for vim-go
+set autowrite
+
 call plug#begin()
 Plug 'fatih/vim-go', {'do': ':GoInstallBinaries'}
 call plug#end()
 
+map <C-n> :cnext<CR>
+map <C-m> :cprevious<CR>
+nnoremap <Leader>a :cclose<CR>
+
+autocmd FileType go nmap <Leader>b <Plug>(go-build)
+autocmd FileType go nmap <Leader>r <Plug>(go-run)
