@@ -39,8 +39,9 @@ call dein#add('Shougo/dein.vim')
 " Add or remove your plugins here:
 call dein#add('Shougo/neosnippet.vim')
 call dein#add('Shougo/neosnippet-snippets')
+
 call dein#add('scrooloose/nerdtree')
-call dein#add('mattn/terminal')
+nnoremap :tree :NERDTree
 
 " You can specify revision/branch/tag.
 call dein#add('Shougo/vimshell', { 'rev': '3787e5' })
