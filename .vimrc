@@ -21,20 +21,39 @@ set background=dark
 set t_Co=256
 
 " customize
-let mapleader="\<Space>"
-"" reload vimrc
-noremap <Leader>r :source ~/.vimrc<CR>:noh<CR>
+" dein Scripts-----------------------------
+if &compatible
+  set nocompatible               " Be iMproved
+endif
 
-" for vim-go
-set autowrite
+" Required:
+set runtimepath+=~/.vim/dein/dein.vim
 
-call plug#begin()
-Plug 'fatih/vim-go', {'do': ':GoInstallBinaries'}
-call plug#end()
+" Required:
+call dein#begin('~/.vim/dein')
 
-map <C-n> :cnext<CR>
-map <C-m> :cprevious<CR>
-nnoremap <Leader>a :cclose<CR>
+" Let dein manage dein
+" Required:
+call dein#add('Shougo/dein.vim')
 
-autocmd FileType go nmap <Leader>b <Plug>(go-build)
-autocmd FileType go nmap <Leader>r <Plug>(go-run)
+" Add or remove your plugins here:
+call dein#add('Shougo/neosnippet.vim')
+call dein#add('Shougo/neosnippet-snippets')
+call dein#add('scrooloose/nerdtree')
+call dein#add('mattn/terminal')
+
+" You can specify revision/branch/tag.
+call dein#add('Shougo/vimshell', { 'rev': '3787e5' })
+
+" Required:
+call dein#end()
+
+" Required:
+filetype plugin indent on
+syntax enable
+
+" If you want to install not installed plugins on startup.
+if dein#check_install()
+  call dein#install()
+endif
+
