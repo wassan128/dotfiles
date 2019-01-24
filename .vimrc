@@ -3,7 +3,9 @@ set encoding=utf-8
 set number
 set ruler
 set tabstop=4
+set expandtab
 set smartindent
+set autoindent
 set shiftwidth=4
 set backspace=indent,eol,start
 set clipboard=unnamed,autoselect
