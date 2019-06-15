@@ -1,5 +1,8 @@
-stty stop undef
+# standard
+## vi mode
+set -o vi
 
+## aliases
 alias ls='ls -CF --color=auto'
 alias ll='ls -AlFh --show-control-chars --color=auto'
 alias la='ls -CFal'
@@ -9,20 +12,26 @@ alias cp='cp -i'
 alias sc='screen'
 alias ps='ps --sort=start_time'
 
-export PS1='\[\033[01;32m\]\u\[\033[01;34m\] \w \$ \[\033[00m\]'
-
+## standard env
 export PATH=$PATH:/sbin:/usr/sbin
 export PAGER='less'
 export EDITOR='/usr/bin/vim'
 export HISTSIZE=100000
 export LANG='ja_JP.UTF-8'
+case $TERM in
+	linux) LANG=C ;;
+	*) LANG=ja_JP.UTF-8 ;;
+esac
 export LC_ALL='ja_JP.UTF-8'
 export LC_MESSAGES='ja_JP.UTF-8'
 
+# view
+## pyenv
 export PYENV_ROOT="$HOME/.pyenv"
 export PATH="$PYENV_ROOT/bin:$PATH"
 eval "$(pyenv init -)"
 
+## powerline
 function _update_ps1() {
 	PS1=$(powerline-shell $?)
 }
@@ -31,13 +40,10 @@ if [[ $TERM != linux && ! $PROMPT_COMMAND =~ _update_ps1 ]]; then
 	PROMPT_COMMAND="_update_ps1; $PROMPT_COMMAND"
 fi
 
-case $TERM in
-	linux) LANG=C ;;
-	*) LANG=ja_JP.UTF-8 ;;
-esac
-
+## theme
 COLOR_THEME=ambiance && source ~/terminal-color-theme/color-theme-ambiance/ambiance.sh
 
+## tmux
 function is_exists() { type "$1" >/dev/null 2>&1; return $?; }
 function is_osx() { [[ $OSTYPE == darwin* ]]; }
 function is_screen_running() { [ ! -z "$STY" ]; }
@@ -100,4 +106,6 @@ function tmux_automatically_attach_session()
 }
 tmux_automatically_attach_session
 
+# secrets
+## for my private use
 source ~/.secrets
