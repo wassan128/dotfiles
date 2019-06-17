@@ -43,7 +43,8 @@ if [[ $TERM != linux && ! $PROMPT_COMMAND =~ _update_ps1 ]]; then
 fi
 
 ## theme
-COLOR_THEME=ambiance && source ~/terminal-color-theme/color-theme-ambiance/ambiance.sh
+COLOR_THEME_PATH=~/terminal-color-theme/color-theme-ambiance/ambiance.sh
+[ -f "$COLOR_THEME_PATH" ] && COLOR_THEME=ambiance && source $COLOR_THEME_PATH
 
 ## tmux
 [[ $- != *i*  ]] && return
