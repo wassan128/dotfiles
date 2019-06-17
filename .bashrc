@@ -3,14 +3,16 @@
 set -o vi
 
 ## aliases
-alias ls='ls -CF --color=auto'
-alias ll='ls -AlFh --show-control-chars --color=auto'
+if [ $OSTYPE != "darwin*" ]; then
+    alias ls='ls -CF --color=auto'
+    alias ll='ls -AlFh --show-control-chars --color=auto'
+    alias ps='ps --sort=start_time'
+fi
 alias la='ls -CFal'
 alias mv='mv -i'
 alias rm='rm -i'
 alias cp='cp -i'
 alias sc='screen'
-alias ps='ps --sort=start_time'
 
 ## standard env
 export PATH=$PATH:/sbin:/usr/sbin
