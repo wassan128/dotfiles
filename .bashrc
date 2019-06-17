@@ -84,4 +84,6 @@ fi
 
 # secrets
 ## for my private use
-source ~/.secrets
+SECRETS_PATH="${HOME}/.secrets"
+[ -f "$SECRETS_PATH" ] && source $SECRETS_PATH
+
