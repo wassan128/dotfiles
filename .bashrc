@@ -3,11 +3,12 @@
 set -o vi
 
 ## aliases
-if [ $OSTYPE != "darwin*" ]; then
+if [[ ! $OSTYPE =~ "darwin" ]]; then
     alias ls='ls -CF --color=auto'
     alias ll='ls -AlFh --show-control-chars --color=auto'
     alias ps='ps --sort=start_time'
 fi
+
 alias la='ls -CFal'
 alias mv='mv -i'
 alias rm='rm -i'
@@ -86,5 +87,6 @@ fi
 # secrets
 ## for my private use
 SECRETS_PATH="${HOME}/.secrets"
-[ -f "$SECRETS_PATH" ] && source $SECRETS_PATH
+[ -f "$SECRETS_PATH" ] && source $SECRETS_PATH && \
+    echo $(tput setaf 49)'  [info] secrets loaded'$(tput sgr0)
 
