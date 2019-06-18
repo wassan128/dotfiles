@@ -90,3 +90,5 @@ SECRETS_PATH="${HOME}/.secrets"
 [ -f "$SECRETS_PATH" ] && source $SECRETS_PATH && \
     echo $(tput setaf 3)' [*] secrets loaded'$(tput sgr0)
 
+# fish
+exec fish
