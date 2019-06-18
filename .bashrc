@@ -71,22 +71,22 @@ if [[ -z $TMUX ]]; then
     fi
 else
     echo
-    echo $(tput setaf 31)'   o                                             '$(tput sgr0)
-    echo $(tput setaf 32)'  <|>     \o__ __o__ __o    o       o   \o    o/ '$(tput sgr0)
-    echo $(tput setaf 33)'  <o_/     |     |     |>  <|>     <|>   v\  /v  '$(tput sgr0)
-    echo $(tput setaf 34)'   |      / \   / \   / \  < >     < >    <\/>   '$(tput sgr0)
-    echo $(tput setaf 35)'  <|>     \o/   \o/   \o/   |       |     o/\o   '$(tput sgr0)
-    echo $(tput setaf 36)'   o       |     |     |    o       o    /v  v\  '$(tput sgr0)
-    echo $(tput setaf 37)'   <\__   / \   / \   / \   <\__ __/>   />    <\ '$(tput sgr0)
+    echo $(tput setaf 31)'  o                                         '$(tput sgr0)
+    echo $(tput setaf 32)' <|>   \o__ __o__ __o   o       o  \o    o/ '$(tput sgr0)
+    echo $(tput setaf 33)' <o_/   |     |     |> <|>     <|>  v\  /v  '$(tput sgr0)
+    echo $(tput setaf 34)'  |    / \   / \   / \ < >     < >   <\/>   '$(tput sgr0)
+    echo $(tput setaf 35)' <|>   \o/   \o/   \o/  |       |    o/\o   '$(tput sgr0)
+    echo $(tput setaf 36)'  o     |     |     |   o       o   /v  v\  '$(tput sgr0)
+    echo $(tput setaf 37)'  <\__ / \   / \   / \  <\__ __/>  />    <\ '$(tput sgr0)
     echo
-    echo $(tput setaf 6)'  ==============================================='$(tput sgr0)
-    echo $(tput setaf 6)"  =  🐧 < Settings created by wassan128 loaded  ="$(tput sgr0)
-    echo $(tput setaf 6)'  ==============================================='$(tput sgr0)
+    echo $(tput setaf 6)' ==========================================='$(tput sgr0)
+    echo $(tput setaf 6)" =  🐧 < Settings are loaded (@wassan128)  ="$(tput sgr0)
+    echo $(tput setaf 6)' ==========================================='$(tput sgr0)
 fi
 
 # secrets
 ## for my private use
 SECRETS_PATH="${HOME}/.secrets"
 [ -f "$SECRETS_PATH" ] && source $SECRETS_PATH && \
-    echo $(tput setaf 49)'  [info] secrets loaded'$(tput sgr0)
+    echo $(tput setaf 3)' [info] secrets loaded'$(tput sgr0)
 
