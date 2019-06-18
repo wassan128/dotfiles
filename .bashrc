@@ -88,5 +88,5 @@ fi
 ## for my private use
 SECRETS_PATH="${HOME}/.secrets"
 [ -f "$SECRETS_PATH" ] && source $SECRETS_PATH && \
-    echo $(tput setaf 3)' [info] secrets loaded'$(tput sgr0)
+    echo $(tput setaf 3)' [*] secrets loaded'$(tput sgr0)
 
