@@ -76,7 +76,7 @@ else
     echo $(tput setaf 37)'  <\__ / \   / \   / \  <\__ __/>  />    <\ '$(tput sgr0)
     echo
     echo $(tput setaf 6)' ==========================================='$(tput sgr0)
-    echo $(tput setaf 6)" =  🐧 < Settings are loaded (@wassan128)  ="$(tput sgr0)
+    echo $(tput setaf 6)' =  🐧 < Settings are loaded (@wassan128)  ='$(tput sgr0)
     echo $(tput setaf 6)' ==========================================='$(tput sgr0)
 fi
 
