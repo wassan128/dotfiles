@@ -25,3 +25,11 @@ repo = "airblade/vim-gitgutter"
 
 [[plugins]]
 repo = "leafgarland/typescript-vim"
+
+[[plugins]]
+repo = "Quramy/tsuquyomi"
+on_ft = ["typescript"]
+
+[[plugins]]
+repo = "Shougo/vimproc"
+build = "make"
