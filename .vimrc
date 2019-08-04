@@ -37,6 +37,8 @@ for d in [&dir, &backupdir, &undodir]
 endfor
 
 " keymap
+"" omni
+imap <C-Space> <C-x><C-o>
 "" window
 nnoremap s <Nop>
 nnoremap sh <C-w>h
