@@ -33,3 +33,7 @@ on_ft = ["typescript"]
 [[plugins]]
 repo = "Shougo/vimproc"
 build = "make"
+
+[[plugins]]
+repo = "scrooloose/nerdtree"
+

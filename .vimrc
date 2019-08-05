@@ -118,5 +118,11 @@ let g:airline_symbols.whitespace = 'Ξ'
 " settings for indentLine
 let g:indentLine_char = ":"
 
+" settings for nerdtree
+"" DO NOT display nerdtree if filename specified when start vim
+autocmd StdinReadPre * let s:std_in=1
+autocmd VimEnter * if argc() == 0 && !exists("s:std_in") | NERDTree | endif
+map <C-x><C-n> :NERDTreeToggle<CR>
+
 syntax enable
 
