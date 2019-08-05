@@ -10,6 +10,14 @@ set shiftwidth=4
 set backspace=indent,eol,start
 set clipboard=unnamed,autoselect
 
+" completion
+if has("autocmd") && exists("+omnifunc")
+    autocmd Filetype *
+        \   if &omnifunc == "" |
+        \           setlocal omnifunc=syntaxcomplete#Complete |
+        \   endif
+endif
+
 " search
 set incsearch
 set hlsearch
@@ -38,7 +46,7 @@ endfor
 
 " keymap
 "" omni
-imap <C-Space> <C-x><C-o>
+imap <C-x><C-x> <C-x><C-o>
 "" window
 nnoremap s <Nop>
 nnoremap sh <C-w>h
