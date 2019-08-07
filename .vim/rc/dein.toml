@@ -38,4 +38,7 @@ build = "make"
 repo = "scrooloose/nerdtree"
 
 [[plugins]]
-repo =  "Xuyuanp/nerdtree-git-plugin"
+repo = "Xuyuanp/nerdtree-git-plugin"
+
+[[plugins]]
+repo = "jistr/vim-nerdtree-tabs"
