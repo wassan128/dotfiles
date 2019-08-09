@@ -32,7 +32,7 @@ export LC_MESSAGES='ja_JP.UTF-8'
 ## pyenv
 type pyenv > /dev/null 2>&1
 status="$?"
-if [[ "$status" = 0 ]]; then
+if [[ "$status" != 0 ]]; then
     export PYENV_ROOT="$HOME/.pyenv"
     export PATH="$PYENV_ROOT/bin:$PATH"
     eval "$(pyenv init -)"
