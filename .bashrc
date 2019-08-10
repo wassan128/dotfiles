@@ -28,16 +28,18 @@ esac
 export LC_ALL='ja_JP.UTF-8'
 export LC_MESSAGES='ja_JP.UTF-8'
 
-# view
 ## pyenv
 type pyenv > /dev/null 2>&1
 status="$?"
 if [[ "$status" != 0 ]]; then
-    export PYENV_ROOT="$HOME/.pyenv"
-    export PATH="$PYENV_ROOT/bin:$PATH"
-    eval "$(pyenv init -)"
+    git clone git://github.com/yyuu/pyenv.git ~/.pyenv
 fi
 
+export PYENV_ROOT="$HOME/.pyenv"
+export PATH="$PYENV_ROOT/bin:$PATH"
+eval "$(pyenv init -)"
+
+# view
 ## powerline
 _update_ps1() {
 	PS1=$(powerline-shell $?)
