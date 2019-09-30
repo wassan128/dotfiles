@@ -24,13 +24,6 @@ repo = "tpope/vim-fugitive"
 repo = "airblade/vim-gitgutter"
 
 [[plugins]]
-repo = "leafgarland/typescript-vim"
-
-[[plugins]]
-repo = "Quramy/tsuquyomi"
-on_ft = ["typescript"]
-
-[[plugins]]
 repo = "Shougo/vimproc"
 build = "make"
 
@@ -44,4 +37,12 @@ repo = "Xuyuanp/nerdtree-git-plugin"
 repo = "jistr/vim-nerdtree-tabs"
 
 [[plugins]]
+repo = "leafgarland/typescript-vim"
+
+[[plugins]]
+repo = "Quramy/tsuquyomi"
+on_ft = ["typescript"]
+
+[[plugins]]
 repo = "chr4/nginx.vim"
+
