@@ -49,3 +49,5 @@ repo = "chr4/nginx.vim"
 [[plugins]]
 repo = "kana/vim-submode"
 
+[[plugins]]
+repo = "arcticicestudio/nord-vim"
