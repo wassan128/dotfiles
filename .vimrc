@@ -140,7 +140,7 @@ endif
 set laststatus=2
 let g:airline_powerline_fonts = 1
 let g:airline#extensions#whitespace#mixed_indent_algo = 1
-let g:airline_theme = 'raven'
+let g:airline_theme = 'nord'
 
 if !exists('g:airline_symbols')
     let g:airline_symbols = {}
