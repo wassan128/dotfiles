@@ -51,3 +51,6 @@ repo = "kana/vim-submode"
 
 [[plugins]]
 repo = "arcticicestudio/nord-vim"
+
+[[plugins]]
+repo = "dag/vim-fish"
