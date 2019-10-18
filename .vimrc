@@ -42,6 +42,7 @@ let g:ale_echo_msg_warning_str = '⚠'
 let g:ale_echo_msg_format = '[%severity%][%linter%] %s'
 let g:ale_lint_on_text_changed = 0
 let g:ale_open_list = 1
+let g:ale_lint_on_enter = 0
 
 " tabs
 function! s:SID_PREFIX()
@@ -129,6 +130,8 @@ nnoremap j gj
 nnoremap k gk
 nnoremap <down> gj
 nnoremap <up> gk
+"" highlight
+nnoremap <silent> <Esc><Esc> :noh<CR>
 
 " settings for dein.vim
 let s:dein_dir = expand("~/.cache/dein")
