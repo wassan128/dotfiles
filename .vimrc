@@ -34,6 +34,15 @@ if executable('go-langserver')
     autocmd BufWritePre *.go LspDocumentFormatSync
 endif
 
+" syntax check
+"" ale
+let g:airline#extensions#ale#enabled = 1
+let g:ale_echo_msg_error_str = '⨉'
+let g:ale_echo_msg_warning_str = '⚠'
+let g:ale_echo_msg_format = '[%severity%][%linter%] %s'
+let g:ale_lint_on_text_changed = 0
+let g:ale_open_list = 1
+
 " tabs
 function! s:SID_PREFIX()
   return matchstr(expand('<sfile>'), '<SNR>\d\+_\zeSID_PREFIX$')
