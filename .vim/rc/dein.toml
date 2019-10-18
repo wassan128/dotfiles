@@ -1,8 +1,14 @@
+# basic
 [[plugins]]
 repo = "Shougo/dein.vim"
 
 [[plugins]]
 repo = "Shougo/vimproc.vim"
+build = "make"
+
+# theme
+[[plugins]]
+repo = "arcticicestudio/nord-vim"
 
 [[plugins]]
 repo = "vim-airline/vim-airline"
@@ -11,6 +17,8 @@ depends = ["vim-airline-themes"]
 [[plugins]]
 repo = "vim-airline/vim-airline-themes"
 
+# function
+## for little lazy
 [[plugins]]
 repo = "Townk/vim-autoclose"
 
@@ -18,15 +26,16 @@ repo = "Townk/vim-autoclose"
 repo = "bronson/vim-trailing-whitespace"
 
 [[plugins]]
+repo = "kana/vim-submode"
+
+## git
+[[plugins]]
 repo = "tpope/vim-fugitive"
 
 [[plugins]]
 repo = "airblade/vim-gitgutter"
 
-[[plugins]]
-repo = "Shougo/vimproc"
-build = "make"
-
+## listing files
 [[plugins]]
 repo = "scrooloose/nerdtree"
 
@@ -36,6 +45,8 @@ repo = "Xuyuanp/nerdtree-git-plugin"
 [[plugins]]
 repo = "jistr/vim-nerdtree-tabs"
 
+# completion
+## typescript
 [[plugins]]
 repo = "leafgarland/typescript-vim"
 
@@ -43,14 +54,11 @@ repo = "leafgarland/typescript-vim"
 repo = "Quramy/tsuquyomi"
 on_ft = ["typescript"]
 
+## nginx
 [[plugins]]
 repo = "chr4/nginx.vim"
 
-[[plugins]]
-repo = "kana/vim-submode"
-
-[[plugins]]
-repo = "arcticicestudio/nord-vim"
-
+# syntax highlight
 [[plugins]]
 repo = "dag/vim-fish"
+
