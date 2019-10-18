@@ -46,6 +46,10 @@ repo = "Xuyuanp/nerdtree-git-plugin"
 repo = "jistr/vim-nerdtree-tabs"
 
 # completion
+## syntax check
+[[plugins]]
+repo = "w0rp/ale"
+
 ## language server
 [[plugins]]
 repo = "prabirshrestha/async.vim"
