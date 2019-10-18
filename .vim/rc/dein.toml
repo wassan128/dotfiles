@@ -28,6 +28,9 @@ repo = "bronson/vim-trailing-whitespace"
 [[plugins]]
 repo = "kana/vim-submode"
 
+[[plugins]]
+repo = "tpope/vim-surround"
+
 ## git
 [[plugins]]
 repo = "tpope/vim-fugitive"
