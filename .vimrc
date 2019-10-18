@@ -11,6 +11,12 @@ set backspace=indent,eol,start
 set clipboard=unnamed,autoselect
 
 " completion
+"" lsp settings
+let g:asyncomplete_remove_duplicates = 1
+let g:asyncomplete_smart_completion = 1
+let g:asyncomplete_auto_popup = 1
+
+"" omni
 if has("autocmd") && exists("+omnifunc")
     autocmd Filetype *
         \   if &omnifunc == "" |
