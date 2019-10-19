@@ -15,6 +15,7 @@ let g:deoplete#enable_at_startup = 1
 
 " completion
 "" lsp settings
+command RN LspRename
 let g:asyncomplete_remove_duplicates = 1
 let g:asyncomplete_smart_completion = 1
 let g:asyncomplete_auto_popup = 1
@@ -147,6 +148,9 @@ nnoremap [q :cprevious<CR>
 nnoremap ]q :cnext<CR>
 nnoremap [Q :<C-u>cfirst<CR>
 nnoremap ]Q :<C-u>clast<CR>
+"" lsp
+nnoremap <C-b> :LspDefinition<CR>
+nnoremap <C-h> :LspReferences<CR>
 
 " settings for dein.vim
 let s:dein_dir = expand("~/.cache/dein")
