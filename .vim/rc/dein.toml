@@ -11,11 +11,7 @@ build = "make"
 repo = "arcticicestudio/nord-vim"
 
 [[plugins]]
-repo = "vim-airline/vim-airline"
-depends = ["vim-airline-themes"]
-
-[[plugins]]
-repo = "vim-airline/vim-airline-themes"
+repo = "itchyny/lightline.vim"
 
 # function
 ## for little lazy
