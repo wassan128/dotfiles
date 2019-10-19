@@ -209,9 +209,9 @@ let g:indentLine_char = ":"
 
 " settings for nerdtree
 let NERDTreeWinSize=15
-"" DO NOT display nerdtree if filename specified when start vim
-autocmd StdinReadPre * let s:std_in=1
-autocmd VimEnter * if argc() == 0 && !exists("s:std_in") | NERDTree | endif
+let NERDTreeShowHidden = 1
+let g:nerdtree_tabs_open_on_console_startup=1
+autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTree") && b:NERDTree.isTabTree()) | q | endif
 map <C-x><C-n> :NERDTreeTabsToggle<CR>
 
 "" settings for nerdtree git
