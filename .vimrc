@@ -10,6 +10,9 @@ set shiftwidth=4
 set backspace=indent,eol,start
 set clipboard=unnamed,autoselect
 
+
+let g:deoplete#enable_at_startup = 1
+
 " completion
 "" lsp settings
 let g:asyncomplete_remove_duplicates = 1
@@ -36,10 +39,17 @@ endif
 
 " syntax check
 "" ale
-let g:airline#extensions#ale#enabled = 1
+let g:ale_linters = {
+\ 'javascript': ['eslint'],
+\}
+let g:ale_sign_error = '⨉'
+let g:ale_sign_warning = '⚠'
+let g:ale_statusline_format = ['⨉ %d', '⚠ %d', '⬥ ok']
 let g:ale_echo_msg_error_str = '⨉'
 let g:ale_echo_msg_warning_str = '⚠'
 let g:ale_echo_msg_format = '[%severity%][%linter%] %s'
+let g:ale_set_loclist = 0
+let g:ale_set_quickfix = 1
 let g:ale_lint_on_text_changed = 0
 let g:ale_open_list = 1
 let g:ale_lint_on_enter = 0
@@ -132,6 +142,11 @@ nnoremap <down> gj
 nnoremap <up> gk
 "" highlight
 nnoremap <silent> <Esc><Esc> :noh<CR>
+"" vimgrep
+nnoremap [q :cprevious<CR>
+nnoremap ]q :cnext<CR>
+nnoremap [Q :<C-u>cfirst<CR>
+nnoremap ]Q :<C-u>clast<CR>
 
 " settings for dein.vim
 let s:dein_dir = expand("~/.cache/dein")
