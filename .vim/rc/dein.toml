@@ -1,5 +1,4 @@
-# basic
-[[plugins]]
+# basic [[plugins]]
 repo = "Shougo/dein.vim"
 
 [[plugins]]
@@ -105,6 +104,9 @@ on_ft = ["typescript"]
 [[plugins]]
 repo = "Valloric/YouCompleteMe"
 merged = 0
+# cd .cache/dein/repos/.../YouCompleteMe
+# git subomodule update --init --recursive
+# /usr/bin/python install.py
 
 ## nginx
 [[plugins]]
