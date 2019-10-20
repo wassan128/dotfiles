@@ -215,7 +215,7 @@ let g:airline_symbols.whitespace = 'Ξ'
 let g:indentLine_char = ":"
 
 " settings for nerdtree
-let NERDTreeWinSize=15
+let NERDTreeWinSize=25
 let NERDTreeShowHidden = 1
 let g:nerdtree_tabs_open_on_console_startup=1
 autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTree") && b:NERDTree.isTabTree()) | q | endif
