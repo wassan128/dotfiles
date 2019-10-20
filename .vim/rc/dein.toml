@@ -72,11 +72,11 @@ repo = "Xuyuanp/nerdtree-git-plugin"
 [[plugins]]
 repo = "jistr/vim-nerdtree-tabs"
 
-# completion
-## syntax check
+# syntax check
 [[plugins]]
 repo = "w0rp/ale"
 
+# completion
 ## language server
 [[plugins]]
 repo = "prabirshrestha/async.vim"
@@ -100,6 +100,11 @@ repo = "leafgarland/typescript-vim"
 [[plugins]]
 repo = "Quramy/tsuquyomi"
 on_ft = ["typescript"]
+
+## javascript
+[[plugins]]
+repo = "Valloric/YouCompleteMe"
+merged = 0
 
 ## nginx
 [[plugins]]
