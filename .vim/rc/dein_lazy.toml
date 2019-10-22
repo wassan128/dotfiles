@@ -1,0 +1,5 @@
+# syntax highlight
+## kotlin
+[[plugins]]
+repo = "udalov/kotlin-vim"
+

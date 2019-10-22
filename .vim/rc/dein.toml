@@ -1,4 +1,5 @@
-# basic [[plugins]]
+# basic
+[[plugins]]
 repo = "Shougo/dein.vim"
 
 [[plugins]]
@@ -91,14 +92,6 @@ repo = "prabirshrestha/asyncomplete-lsp.vim"
 
 [[plugins]]
 repo = "natebosch/vim-lsc"
-
-## typescript
-[[plugins]]
-repo = "leafgarland/typescript-vim"
-
-[[plugins]]
-repo = "Quramy/tsuquyomi"
-on_ft = ["typescript"]
 
 ## javascript
 [[plugins]]
