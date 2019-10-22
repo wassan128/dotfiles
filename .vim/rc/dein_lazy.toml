@@ -1,5 +1,10 @@
 # syntax highlight
 ## kotlin
 [[plugins]]
-repo = "udalov/kotlin-vim"
+repo = 'udalov/kotlin-vim'
+on_ft = 'kotlin'
+
+[[plugins]]
+repo = 'ekalinin/Dockerfile.vim'
+on_ft = ['Dockerfile', 'docker-compose']
 
