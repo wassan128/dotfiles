@@ -100,9 +100,6 @@ repo = "natebosch/vim-lsc"
 [[plugins]]
 repo = "Valloric/YouCompleteMe"
 merged = 0
-# cd .cache/dein/repos/.../YouCompleteMe
-# git subomodule update --init --recursive
-# /usr/bin/python install.py
 
 ## nginx
 [[plugins]]
