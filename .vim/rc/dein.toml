@@ -6,6 +6,9 @@ repo = "Shougo/dein.vim"
 repo = "Shougo/vimproc.vim"
 build = "make"
 
+[[plugins]]
+repo = "Shougo/vimshell.vim"
+
 # theme
 [[plugins]]
 repo = "arcticicestudio/nord-vim"
