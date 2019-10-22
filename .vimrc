@@ -10,9 +10,6 @@ set shiftwidth=4
 set backspace=indent,eol,start
 set clipboard=unnamed,autoselect
 
-
-let g:deoplete#enable_at_startup = 1
-
 " completion
 "" lsp settings
 command RN LspRename
