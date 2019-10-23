@@ -248,6 +248,7 @@ call submode#map('bufmove', 'n', '', '-', '<C-w>-')
 
 "" setings for vimshell
 nnoremap <silent> vp :10sp<CR><C-w>r:VimShell<CR>
+nnoremap <silent> vs :VimShell<CR>
 
 " color scheme
 colorscheme nord
