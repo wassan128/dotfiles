@@ -151,6 +151,7 @@ nnoremap [q :cprevious<CR>
 nnoremap ]q :cnext<CR>
 nnoremap [Q :<C-u>cfirst<CR>
 nnoremap ]Q :<C-u>clast<CR>
+autocmd QuickFixCmdPost *grep* cwindow
 "" lsp
 nnoremap <C-b> :LspDefinition<CR>
 nnoremap <C-h> :LspReferences<CR>
