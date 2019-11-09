@@ -19,30 +19,30 @@ let g:asyncomplete_auto_popup = 1
 
 "" omni
 if has("autocmd") && exists("+omnifunc")
-    autocmd Filetype *
-        \   if &omnifunc == "" |
-        \           setlocal omnifunc=syntaxcomplete#Complete |
-        \   endif
+  autocmd Filetype *
+    \ if &omnifunc == "" |
+    \   setlocal omnifunc=syntaxcomplete#Complete |
+    \ endif
 endif
 
 "" golang
 if executable('go-langserver')
-    au User lsp_setup call lsp#register_server({
-        \ 'name': 'go-langserver',
-        \ 'cmd': {server_info->['go-langserver', '-gocodecompletion']},
-        \ 'whitelist': ['go'],
-        \ })
-    autocmd BufWritePre *.go LspDocumentFormatSync
+  au User lsp_setup call lsp#register_server({
+    \ 'name': 'go-langserver',
+    \ 'cmd': {server_info->['go-langserver', '-gocodecompletion']},
+    \ 'whitelist': ['go'],
+    \ })
+  autocmd BufWritePre *.go LspDocumentFormatSync
 endif
 
 "" typescript
 if executable('typescript-language-server')
-    au User lsp_setup call lsp#register_server({
-      \ 'name': 'javascript support using typescript-language-server',
-      \ 'cmd': { server_info->[&shell, &shellcmdflag, 'typescript-language-server --stdio']},
-      \ 'root_uri': { server_info->lsp#utils#path_to_uri(lsp#utils#find_nearest_parent_directory(lsp#utils#get_buffer_path(), '.git/..'))},
-      \ 'whitelist': ['javascript', 'javascript.jsx', 'javascriptreact']
-      \ })
+  au User lsp_setup call lsp#register_server({
+    \ 'name': 'javascript support using typescript-language-server',
+    \ 'cmd': { server_info->[&shell, &shellcmdflag, 'typescript-language-server --stdio']},
+    \ 'root_uri': { server_info->lsp#utils#path_to_uri(lsp#utils#find_nearest_parent_directory(lsp#utils#get_buffer_path(), '.git/..'))},
+    \ 'whitelist': ['javascript', 'javascript.jsx', 'javascriptreact']
+    \ })
 endif
 
 " syntax check
@@ -76,17 +76,17 @@ endfunction
 function! s:my_tabline()  "{{{
   let s = ''
   for i in range(1, tabpagenr('$'))
-    let bufnrs = tabpagebuflist(i)
-    let bufnr = bufnrs[tabpagewinnr(i) - 1]  " first window, first appears
-    let no = i
-    let mod = getbufvar(bufnr, '&modified') ? '!' : ' '
-    let title = fnamemodify(bufname(bufnr), ':t')
-    let title = '[' . title . ']'
-    let s .= '%'.i.'T'
-    let s .= '%#' . (i == tabpagenr() ? 'TabLineSel' : 'TabLine') . '#'
-    let s .= no . ':' . title
-    let s .= mod
-    let s .= '%#TabLineFill# '
+  let bufnrs = tabpagebuflist(i)
+  let bufnr = bufnrs[tabpagewinnr(i) - 1]  " first window, first appears
+  let no = i
+  let mod = getbufvar(bufnr, '&modified') ? '!' : ' '
+  let title = fnamemodify(bufname(bufnr), ':t')
+  let title = '[' . title . ']'
+  let s .= '%'.i.'T'
+  let s .= '%#' . (i == tabpagenr() ? 'TabLineSel' : 'TabLine') . '#'
+  let s .= no . ':' . title
+  let s .= mod
+  let s .= '%#TabLineFill# '
   endfor
   let s .= '%#TabLineFill#%T%=%#TabLine#'
   return s
@@ -98,7 +98,7 @@ nnoremap [Tag] <Nop>
 nmap t [Tag]
 
 for n in range(1, 9)
-    execute 'nnoremap <silent> [Tag]'.n ':<C-u>tabnext'.n.'<CR>'
+  execute 'nnoremap <silent> [Tag]'.n ':<C-u>tabnext'.n.'<CR>'
 endfor
 
 map <silent> [Tag]c :tablast <bar> tabnew<CR>
@@ -127,9 +127,9 @@ set backupdir=~/.cache/vim/backup
 set undofile
 set undodir=~/.cache/vim/undo
 for d in [&dir, &backupdir, &undodir]
-    if !isdirectory(d)
-        call mkdir(iconv(d, &encoding, &termencoding), "p")
-    endif
+  if !isdirectory(d)
+    call mkdir(iconv(d, &encoding, &termencoding), "p")
+  endif
 endfor
 
 " keymap
@@ -174,32 +174,32 @@ let s:dein_dir = expand("~/.cache/dein")
 let s:dein_repo_dir = s:dein_dir."/repos/github.com/Shougo/dein.vim"
 
 if &compatible
-    set nocompatible
+  set nocompatible
 endif
 
 if &runtimepath !~# "/dein.vim"
-    if !isdirectory(s:dein_repo_dir)
-        execute "!git clone https://github.com/Shougo/dein.vim" s:dein_repo_dir
-    endif
-    execute "set runtimepath^=".fnamemodify(s:dein_repo_dir, ":p")
+  if !isdirectory(s:dein_repo_dir)
+    execute "!git clone https://github.com/Shougo/dein.vim" s:dein_repo_dir
+  endif
+  execute "set runtimepath^=".fnamemodify(s:dein_repo_dir, ":p")
 endif
 
 if dein#load_state(s:dein_dir)
-    call dein#begin(s:dein_dir)
+  call dein#begin(s:dein_dir)
 
-    let g:rc_dir = expand("~/.vim/rc")
-    let s:toml = g:rc_dir."/dein.toml"
-    let s:toml_lazy = g:rc_dir."/dein_lazy.toml"
+  let g:rc_dir = expand("~/.vim/rc")
+  let s:toml = g:rc_dir."/dein.toml"
+  let s:toml_lazy = g:rc_dir."/dein_lazy.toml"
 
-    call dein#load_toml(s:toml, {"lazy": 0})
-    call dein#load_toml(s:toml_lazy, {"lazy": 1})
+  call dein#load_toml(s:toml, {"lazy": 0})
+  call dein#load_toml(s:toml_lazy, {"lazy": 1})
 
-    call dein#end()
-    call dein#save_state()
+  call dein#end()
+  call dein#save_state()
 endif
 
 if dein#check_install()
-    call dein#install()
+  call dein#install()
 endif
 
 " settings for airline
@@ -209,7 +209,7 @@ let g:airline#extensions#whitespace#mixed_indent_algo = 1
 let g:airline_theme = 'nord'
 
 if !exists('g:airline_symbols')
-    let g:airline_symbols = {}
+  let g:airline_symbols = {}
 endif
 
 " unicode symbols
@@ -239,16 +239,16 @@ map <C-x><C-n> :NERDTreeTabsToggle<CR>
 
 "" settings for nerdtree git
 let g:NERDTreeIndicatorMapCustom = {
-    \ "Modified"  : "*",
-    \ "Staged"    : "+",
-    \ "Untracked" : "~",
-    \ "Renamed"   : "*",
-    \ "Unmerged"  : "!",
-    \ "Deleted"   : "*",
-    \ "Dirty"     : "✗",
-    \ "Clean"     : "✔︎",
-    \ "Unknown"   : "?"
-    \ }
+  \ "Modified"  : "*",
+  \ "Staged"  : "+",
+  \ "Untracked" : "~",
+  \ "Renamed"   : "*",
+  \ "Unmerged"  : "!",
+  \ "Deleted"   : "*",
+  \ "Dirty"   : "✗",
+  \ "Clean"   : "✔︎",
+  \ "Unknown"   : "?"
+  \ }
 
 "" settings for vim-submode
 call submode#enter_with('bufmove', 'n', '', 's>', '<C-w>>')
