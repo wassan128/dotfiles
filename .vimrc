@@ -9,6 +9,8 @@ set autoindent
 set shiftwidth=4
 set backspace=indent,eol,start
 set clipboard=unnamed,autoselect
+set wildignore+=node_modules/**
+set switchbuf+=usetab,newtab
 
 " completion
 "" lsp settings
