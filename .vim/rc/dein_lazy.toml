@@ -4,7 +4,13 @@
 repo = 'udalov/kotlin-vim'
 on_ft = 'kotlin'
 
+## Dockerfile
 [[plugins]]
 repo = 'ekalinin/Dockerfile.vim'
 on_ft = ['Dockerfile', 'docker-compose']
 
+# lsp
+## typescript
+[[plugins]]
+repo = 'ryanolsonx/vim-lsp-typescript'
+on_ft = ['typescript']
