@@ -171,8 +171,34 @@ autocmd QuickFixCmdPost *grep* cwindow
 nnoremap <C-b> :vs<CR>:LspDefinition<CR>
 nnoremap <C-h> :LspReferences<CR>
 
+"" java
+if executable('java') && filereadable(expand('~/lsp/eclipse.jdt.ls/plugins/org.eclipse.equinox.launcher_1.5.300.v20190213-1655.jar'))
+    au User lsp_setup call lsp#register_server({
+        \ 'name': 'eclipse.jdt.ls',
+        \ 'cmd': {server_info->[
+        \     'java',
+        \     '-Declipse.application=org.eclipse.jdt.ls.core.id1',
+        \     '-Dosgi.bundles.defaultStartLevel=4',
+        \     '-Declipse.product=org.eclipse.jdt.ls.core.product',
+        \     '-Dlog.level=ALL',
+        \     '-noverify',
+        \     '-Dfile.encoding=UTF-8',
+        \     '-Xmx1G',
+        \     '-jar',
+        \     expand('~/lsp/eclipse.jdt.ls/plugins/org.eclipse.equinox.launcher_1.5.300.v20190213-1655.jar'),
+        \     '-configuration',
+        \     expand('~/lsp/eclipse.jdt.ls/config_win'),
+        \     '-data',
+        \     getcwd()
+        \ ]},
+        \ 'whitelist': ['java'],
+        \ })
+endif
 let g:lsp_signs_error = {'text': ''}
 let g:lsp_signs_warning = {'text': ''}
+autocmd ColorScheme * highlight LspErrorText ctermfg=9
+autocmd ColorScheme * highlight LspWarningText ctermfg=11
+autocmd ColorScheme * highlight LspErrorHighlight ctermbg=NONE ctermfg=9
 
 " settings for dein.vim
 let s:dein_dir = expand("~/.cache/dein")
