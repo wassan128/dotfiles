@@ -295,6 +295,10 @@ call submode#map('bufmove', 'n', '', '-', '<C-w>-')
 nnoremap <silent> vp :10sp<CR><C-w>r:VimShell<CR>
 nnoremap <silent> vs :VimShell<CR>
 
+"" settings for change spaces
+nnoremap <silent> ts2 :set tabstop=2<CR>:set shiftwidth=2<CR>
+nnoremap <silent> ts4 :set tabstop=4<CR>:set shiftwidth=4<CR>
+
 " color scheme
 colorscheme nord
 
