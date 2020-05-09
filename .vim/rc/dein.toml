@@ -109,3 +109,7 @@ repo = "chr4/nginx.vim"
 [[plugins]]
 repo = "dag/vim-fish"
 
+# syntax Docker
+[[plugins]]
+repo = "ekalinin/Dockerfile.vim"
+
