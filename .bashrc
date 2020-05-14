@@ -28,7 +28,7 @@ esac
 export LC_ALL='ja_JP.UTF-8'
 export LC_MESSAGES='ja_JP.UTF-8'
 export GOPATH="$HOME/go"
-export PATH="$PATH:$GOPATH"
+export PATH="$PATH:$GOPATH:/usr/local/go/bin"
 
 ## pyenv
 type pyenv > /dev/null 2>&1
