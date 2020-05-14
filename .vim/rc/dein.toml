@@ -75,6 +75,9 @@ repo = "Xuyuanp/nerdtree-git-plugin"
 [[plugins]]
 repo = "jistr/vim-nerdtree-tabs"
 
+[[plugins]]
+repo = "ryanoasis/vim-devicons"
+
 # syntax check
 [[plugins]]
 repo = "w0rp/ale"
