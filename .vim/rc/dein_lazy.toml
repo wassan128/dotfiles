@@ -15,6 +15,15 @@ on_ft = ['Dockerfile', 'docker-compose']
 repo = 'ryanolsonx/vim-lsp-typescript'
 on_ft = ['typescript']
 
+[[plugins]]
+repo = 'leafgarland/typescript-vim'
+on_ft = ['typescript']
+
+[[plugins]]
+repo = 'peitalin/vim-jsx-typescript'
+on_ft = ['typescript']
+
+
 ## go
 [[plugins]]
 repo = 'fatih/vim-go'
