@@ -6,3 +6,13 @@ function fish_mode_prompt
 end
 
 set -g theme_nerd_fonts yes
+
+## aliases
+alias la='ls -CFal'
+alias mv='mv -i'
+alias rm='rm -i'
+alias cp='cp -i'
+alias sc='screen'
+alias g='cd (ghq root)/(ghq list | peco)'
+alias gh='hub browse (ghq list | peco | cut -d "/" -f 2,3)'
+
