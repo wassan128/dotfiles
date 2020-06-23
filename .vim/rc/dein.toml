@@ -94,6 +94,9 @@ repo = "prabirshrestha/async.vim"
 repo = "prabirshrestha/vim-lsp"
 
 [[plugins]]
+repo = "mattn/vim-lsp-settings"
+
+[[plugins]]
 repo = "prabirshrestha/asyncomplete.vim"
 
 [[plugins]]
