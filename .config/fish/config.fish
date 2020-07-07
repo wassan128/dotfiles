@@ -6,6 +6,7 @@ function fish_mode_prompt
 end
 
 set -g theme_nerd_fonts yes
+set -g theme_display_user yes
 
 ## aliases
 alias la='ls -CFal'
