@@ -1,0 +1,36 @@
+add_newline = true
+
+[battery]
+disabled = true
+
+[character]
+symbol = " `･ω ･´  "
+vicmd_symbol = " ´･ω ･`  "
+style_success = "white bg:blue"
+style_failure = "white bg:red"
+
+[git_branch]
+style = "green"
+symbol = ""
+
+[git_status]
+conflicted = "🏳"
+ahead = "🏎💨"
+behind = "😰"
+diverged = "😵"
+untracked = "🤷‍"
+stashed = "📦"
+modified = "📝"
+staged.value = "++"
+staged.style = "green"
+staged_count.enabled = true
+staged_count.style = "green"
+renamed = "👅"
+deleted = "🗑"
+
+[package]
+style = "#ffc0cb"
+symbol = " "
+
+[golang]
+symbol = " "

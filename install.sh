@@ -8,6 +8,7 @@ do
 
     if [ "$f" = ".config" ]; then
         ln -snfv "$DOTPATH/$f/fish/config.fish" "$HOME/.config/fish/config.fish"
+        ln -snfv "$DOTPATH/$f/starship.toml" "$HOME/.config/starship.toml"
         continue
     fi
 
