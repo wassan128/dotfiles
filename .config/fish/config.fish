@@ -8,6 +8,9 @@ end
 set -g theme_nerd_fonts yes
 set -g theme_display_user yes
 
+## starship prompt
+/usr/local/bin/starship init fish | source
+
 ## aliases
 alias la='ls -CFal'
 alias mv='mv -i'
