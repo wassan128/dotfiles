@@ -15,22 +15,25 @@ symbol = ""
 
 [git_status]
 conflicted = "🏳"
-ahead = "🏎💨"
-behind = "😰"
-diverged = "😵"
-untracked = "🤷‍"
-stashed = "📦"
-modified = "📝"
+ahead = " "
+behind = " "
+diverged = " "
+untracked = " "
+stashed = " "
+modified = " "
 staged.value = "++"
 staged.style = "green"
 staged_count.enabled = true
 staged_count.style = "green"
-renamed = "👅"
+renamed = " "
 deleted = "🗑"
-
-[package]
-style = "#ffc0cb"
-symbol = " "
 
 [golang]
 symbol = " "
+
+[python]
+symbol = " "
+
+[ruby]
+symbol = " "
+
