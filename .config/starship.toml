@@ -6,8 +6,8 @@ disabled = true
 [character]
 symbol = " `･ω ･´  "
 vicmd_symbol = " ´･ω ･`  "
-style_success = "white bg:blue"
-style_failure = "white bg:red"
+style_success = "white bg:#3464b3"
+style_failure = "white bg:#d1544b"
 
 [git_branch]
 style = "green"
