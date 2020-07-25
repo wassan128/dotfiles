@@ -1,6 +1,8 @@
 #!/usr/bin/env bash
 
+# install fish shell
 sudo eopkg install -y fish
+fish
 
 sudo eopkg update-repo -f
 sudo eopkg up -d
@@ -20,6 +22,11 @@ sudo rm google-chrome-*.eopkg
 
 # install golang
 export LOCAL_GOVERSION="1.14.6"
-curl -sSfLO https://golang.org/dl/go$LOCAL_GOVERSION.linux-amd64.tar.gz
-tar -C /usr/local -xzf go$LOCAL_GOVERSION.linux-amd64.tar.gz
-export PATH=$PATH:/usr/local/go/bin
+curl -sSfLO "https://golang.org/dl/go$LOCAL_GOVERSION.linux-amd64.tar.gz"
+tar -C /usr/local -xzf "go$LOCAL_GOVERSION.linux-amd64.tar.gz"
+export PATH="$PATH:/usr/local/go/bin:/home/$USER/go/bin"
+
+# install ghq and peco
+go get github.com/motemen/ghq
+go get github.com/peco/peco/cmd/peco
+alias g='cd (ghq root)/(ghq list | peco)'
