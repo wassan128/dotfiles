@@ -7,6 +7,9 @@ sudo eopkg up -d
 sudo eopkg install -y fish
 fish
 
+# its time to sleep, caps lock
+setxkbmap -option caps:ctrl_modifier
+
 # install foundamental utils and system theme
 sudo eopkg it -c system.devel
 sudo eopkg install -y git
@@ -14,6 +17,7 @@ sudo eopkg install -y arc-gtk-theme
 sudo eopkg install -y paper-gtk-theme paper-icon-theme
 sudo eopkg install -y vim
 sudo eopkg install -y tmux
+sudo eopkg install gnome-tweaks
 
 # install chrome
 sudo eopkg bi --ignore-safety https://raw.githubusercontent.com/getsolus/3rd-party/master/network/web/browser/google-chrome-stable/pspec.xml
