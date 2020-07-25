@@ -8,7 +8,7 @@ sudo eopkg install -y fish
 fish
 
 # its time to sleep, caps lock
-setxkbmap -option caps:ctrl_modifier
+echo "setxkbmap -option caps:ctrl_modifier" >> /home/$USER/.profile
 
 # install foundamental utils and system theme
 sudo eopkg it -c system.devel
@@ -40,7 +40,7 @@ alias g='cd (ghq root)/(ghq list | peco)'
 ssh-keygen
 cat ~/.ssh/id_rsa.pub
 
-# clone this repository and exec install.sh
+# clone dotfile repository and exec install.sh
 ghq get -p git@github.com:wassan128/dotfiles.git
 g
 ./install.sh
