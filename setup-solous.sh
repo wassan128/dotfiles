@@ -9,6 +9,7 @@ fish
 
 # its time to sleep, caps lock
 echo "setxkbmap -option caps:ctrl_modifier" >> /home/$USER/.profile
+bash -c 'source /home/$USER/.profile'
 
 # install foundamental utils and system theme
 sudo eopkg it -c system.devel
