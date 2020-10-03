@@ -269,7 +269,7 @@ autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTree") && b:NERDTree.isT
 map <C-x><C-n> :NERDTreeTabsToggle<CR>
 
 "" settings for nerdtree git
-let g:NERDTreeIndicatorMapCustom = {
+let g:NERDTreeGitStatusIndicatorMapCustom = {
   \ "Modified"  : "*",
   \ "Staged"  : "+",
   \ "Untracked" : "~",
