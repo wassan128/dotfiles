@@ -53,8 +53,12 @@ let g:ale_linters = {
 \ 'javascript': ['eslint'],
 \}
 let g:ale_fixers = {
-\ 'javascript': ['eslint'],
+\ 'javascript': ['prettier'],
+\ 'css': ['prettier'],
 \}
+let g:ale_linters_explicit = 1
+let g:ale_fix_on_save = 1
+let g:ale_javascript_prettier_options = '--single-quote --no-semi all'
 
 let g:ale_sign_error = ''
 let g:ale_sign_warning = ''
