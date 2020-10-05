@@ -85,6 +85,18 @@ repo = "ryanoasis/vim-devicons"
 [[plugins]]
 repo = "w0rp/ale"
 
+# prettier
+[[plugins]]
+repo = "prettier/vim-prettier"
+build = "npm install"
+on_ft = ['javascript', 'typescript', 'css', 'less', 'scss', 'json', 'graphql', 'markdown', 'vue', 'yaml', 'html']
+hook_source = '''
+  let g:prettier#autoformat = 0
+  let g:prettier#quickfix_enabled = 0
+  autocmd BufWritePre *.js,*.ts,*.vue,*.css,*.scss,*.json,*.md PrettierAsync
+'''
+
+
 # completion
 ## language server
 [[plugins]]
