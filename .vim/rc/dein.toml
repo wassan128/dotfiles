@@ -89,11 +89,11 @@ repo = "w0rp/ale"
 [[plugins]]
 repo = "prettier/vim-prettier"
 build = "npm install"
-on_ft = ['javascript', 'typescript', 'css', 'less', 'scss', 'json', 'graphql', 'markdown', 'vue', 'yaml', 'html']
+on_ft = ['json', 'markdown', 'yaml', 'html']
 hook_source = '''
   let g:prettier#autoformat = 0
   let g:prettier#quickfix_enabled = 0
-  autocmd BufWritePre *.js,*.ts,*.vue,*.css,*.scss,*.json,*.md PrettierAsync
+  autocmd BufWritePre *.json,*.md PrettierAsync
 '''
 
 

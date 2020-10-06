@@ -53,6 +53,7 @@ let g:ale_linters = {
 \ 'javascript': ['eslint'],
 \}
 let g:ale_fixers = {
+\ '*': ['remove_trailing_lines', 'trim_whitespace'],
 \ 'javascript': ['prettier'],
 \ 'css': ['prettier'],
 \}
