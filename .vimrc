@@ -15,6 +15,9 @@ set switchbuf+=usetab,newtab
 " completion
 "" lsp settings
 command RN LspRename
+command CA LspCodeAction
+command WSS LspWorkspaceSymbol
+
 let g:asyncomplete_remove_duplicates = 1
 let g:asyncomplete_smart_completion = 1
 let g:asyncomplete_auto_popup = 1
@@ -35,6 +38,7 @@ if executable('go-langserver')
     \ 'whitelist': ['go'],
     \ })
   autocmd BufWritePre *.go LspDocumentFormatSync
+  autocmd FileType go nnoremap <buffer><silent> K :<C-u>LspHover<CR>
 endif
 
 "" typescript
@@ -174,6 +178,10 @@ autocmd QuickFixCmdPost *grep* cwindow
 "" lsp
 nnoremap <C-b> :vs<CR>:LspDefinition<CR>
 nnoremap <C-h> :LspReferences<CR>
+nnoremap <C-k> :LspHover<CR>
+nnoremap <C-i> :LspImplementation<CR>
+nnoremap <silent> ]e :LspNextError<CR>
+nnoremap <silent> [e :LspPreviousError<CR>
 
 "" java
 if executable('java') && filereadable(expand('~/lsp/eclipse.jdt.ls/plugins/org.eclipse.equinox.launcher_1.5.300.v20190213-1655.jar'))
@@ -307,4 +315,3 @@ nnoremap <silent> ts4 :set tabstop=4<CR>:set shiftwidth=4<CR>
 colorscheme nord
 
 syntax enable
-
