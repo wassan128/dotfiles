@@ -27,7 +27,7 @@ done
 # setup vim/neovim rc
 ## vim
 ln -snfv "$current_path/vim/vimrc" "$HOME/.vimrc"
-ln -snfv "$current_path/vim/vim" "$HOME/.vim"
+ln -snfv "$current_path/vim" "$HOME/.vim"
 ## neovim
-ln -snfv "$current_path/vim/nvimrc" "$HOME/.config/nvim/init.vim"
-ln -snfv "$current_path/vim/nvim" "$HOME/.nvim"
+ln -snfv "$current_path/neovim/nvimrc" "$HOME/.config/nvim/init.vim"
+ln -snfv "$current_path/neovim" "$HOME/.nvim"
