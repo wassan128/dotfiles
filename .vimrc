@@ -13,4 +13,11 @@ function! s:source_rc(rc_file_name)
     endif
 endfunction
 
+" 最小構成
+call s:source_rc('minimum.rc.vim')
+
+" ショートカットキー
+call s:source_rc('keymap.rc.vim')
+
+" メイン(移行中)
 call s:source_rc('init.rc.vim')
