@@ -6,9 +6,17 @@ if [[ "$exe_path" != './install.sh' ]]; then
     exit 1
 fi
 
-current_path="$(pwd)"
+mkdirIfNotExist() {
+    local dir="$1"
+    [ ! -d "$HOME/$1" ] && mkdir -p "$HOME/$1"
+}
+
+mkdirIfNotExist '.config'
+mkdirIfNotExist '.config/fish'
+mkdirIfNotExist '.config/nvim'
 
 # init
+current_path="$(pwd)"
 for f in .??*
 do
     # skip list
