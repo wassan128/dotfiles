@@ -11,3 +11,10 @@ set backspace=indent,eol,start
 set clipboard=unnamed,autoselect
 set wildignore+=node_modules/**
 set switchbuf+=usetab,newtab
+set incsearch
+set hlsearch
+set ignorecase
+set smartcase
+set showmatch
+set background=dark
+set t_Co=256

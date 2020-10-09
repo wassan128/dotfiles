@@ -19,5 +19,10 @@ call s:source_rc('minimum.rc.vim')
 " ショートカットキー
 call s:source_rc('keymap.rc.vim')
 
+" tab
+call s:source_rc('tab.rc.vim')
+
 " メイン(移行中)
 call s:source_rc('init.rc.vim')
+
+syntax enable
