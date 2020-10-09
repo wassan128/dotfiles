@@ -130,12 +130,12 @@ set background=dark
 set t_Co=256
 
 " cache
-set viminfo+=n~/.cache/vim/viminfo
-set dir=~/.cache/vim/swap
+set viminfo+=n~/.vim/cache/viminfo
+set dir=~/.vim/cache/swap
 set backup
-set backupdir=~/.cache/vim/backup
+set backupdir=~/.vim/cache/backup
 set undofile
-set undodir=~/.cache/vim/undo
+set undodir=~/.vim/cache/undo
 for d in [&dir, &backupdir, &undodir]
   if !isdirectory(d)
     call mkdir(iconv(d, &encoding, &termencoding), "p")
@@ -213,7 +213,7 @@ autocmd ColorScheme * highlight LspWarningText ctermfg=11
 autocmd ColorScheme * highlight LspErrorHighlight ctermbg=NONE ctermfg=9
 
 " settings for dein.vim
-let s:dein_dir = expand("~/.cache/dein")
+let s:dein_dir = expand("~/.vim/cache/dein")
 let s:dein_repo_dir = s:dein_dir."/repos/github.com/Shougo/dein.vim"
 
 if &compatible
