@@ -30,3 +30,45 @@ endif
 if dein#check_install()
   call dein#install()
 endif
+
+augroup vimrc
+  autocmd!
+augroup END
+
+" settings for nerdtree
+let NERDTreeWinSize=25
+let NERDTreeShowHidden = 1
+let g:nerdtree_tabs_open_on_console_startup=1
+autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTree") && b:NERDTree.isTabTree()) | q | endif
+map <C-x><C-n> :NERDTreeTabsToggle<CR>
+
+"" settings for nerdtree git
+let g:NERDTreeGitStatusIndicatorMapCustom = {
+  \ "Modified"  : "*",
+  \ "Staged"  : "+",
+  \ "Untracked" : "~",
+  \ "Renamed"   : "*",
+  \ "Unmerged"  : "!",
+  \ "Deleted"   : "*",
+  \ "Dirty"   : "✗",
+  \ "Clean"   : "✔︎",
+  \ "Unknown"   : "?"
+  \ }
+
+"" settings for vim-submode
+call submode#enter_with('bufmove', 'n', '', 's>', '<C-w>>')
+call submode#enter_with('bufmove', 'n', '', 's<', '<C-w><')
+call submode#enter_with('bufmove', 'n', '', 's+', '<C-w>+')
+call submode#enter_with('bufmove', 'n', '', 's-', '<C-w>-')
+call submode#map('bufmove', 'n', '', '>', '<C-w>>')
+call submode#map('bufmove', 'n', '', '<', '<C-w><')
+call submode#map('bufmove', 'n', '', '+', '<C-w>+')
+call submode#map('bufmove', 'n', '', '-', '<C-w>-')
+
+"" lsp
+nnoremap <C-b> :vs<CR>:LspDefinition<CR>
+nnoremap <C-h> :LspReferences<CR>
+nnoremap <C-k> :LspHover<CR>
+nnoremap <C-i> :LspImplementation<CR>
+nnoremap <silent> ]e :LspNextError<CR>
+nnoremap <silent> [e :LspPreviousError<CR>

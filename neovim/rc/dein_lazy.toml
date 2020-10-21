@@ -1,0 +1,13 @@
+## nginx
+[[plugins]]
+repo = 'chr4/nginx.vim'
+on_ft = 'conf'
+
+# syntax highlight
+[[plugins]]
+repo = 'dag/vim-fish'
+on_ft = 'fish'
+
+# syntax Docker
+[[plugins]]
+repo = 'ekalinin/Dockerfile.vim'
