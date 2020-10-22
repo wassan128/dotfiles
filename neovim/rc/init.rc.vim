@@ -35,6 +35,19 @@ augroup vimrc
   autocmd!
 augroup END
 
+" cache
+set viminfo+=n~/.nvim/cache/viminfo
+set dir=~/.nvim/cache/swap
+set backup
+set backupdir=~/.nvim/cache/backup
+set undofile
+set undodir=~/.nvim/cache/undo
+for d in [&dir, &backupdir, &undodir]
+  if !isdirectory(d)
+    call mkdir(iconv(d, &encoding, &termencoding), "p")
+  endif
+endfor
+
 " settings for nerdtree
 let NERDTreeWinSize=25
 let NERDTreeShowHidden = 1
