@@ -8,6 +8,9 @@ repo = 'arcticicestudio/nord-vim'
 hook_add = '''
   colorscheme nord
 '''
+  #autocmd ColorScheme * highlight LineNr ctermbg=239
+  #autocmd ColorScheme * highlight LineNr ctermfg=252
+  #set fillchars+=vert:\ 
 
 [[plugins]]
 repo = 'itchyny/lightline.vim'
@@ -40,6 +43,9 @@ repo = 'tpope/vim-surround'
 ## language server
 [[plugins]]
 repo = 'prabirshrestha/vim-lsp'
+hook_add = '''
+  autocmd BufWritePre <buffer> LspDocumentFormatSync
+'''
 
 [[plugins]]
 repo = 'mattn/vim-lsp-settings'
@@ -67,6 +73,13 @@ hook_source = '''
 # denite
 [[plugins]]
 repo = 'Shougo/denite.nvim'
+
+# git
+[[plugins]]
+repo = "tpope/vim-fugitive"
+
+[[plugins]]
+repo = "airblade/vim-gitgutter"
 
 # nerdtree
 ### listing files
