@@ -16,6 +16,6 @@ set hlsearch
 set ignorecase
 set smartcase
 set showmatch
+set fillchars+=vert:\|
 set background=dark
 set t_Co=256
-set termguicolors

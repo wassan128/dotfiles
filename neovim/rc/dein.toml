@@ -4,9 +4,9 @@ repo = 'Shougo/dein.vim'
 
 # theme
 [[plugins]]
-repo = 'joshdick/onedark.vim'
+repo = 'arcticicestudio/nord-vim'
 hook_add = '''
-  colorscheme onedark
+  colorscheme nord
 '''
 
 [[plugins]]
