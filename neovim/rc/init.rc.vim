@@ -85,3 +85,9 @@ nnoremap <C-k> :LspHover<CR>
 nnoremap <C-i> :LspImplementation<CR>
 nnoremap <silent> ]e :LspNextError<CR>
 nnoremap <silent> [e :LspPreviousError<CR>
+
+"" setings for terminal emulator
+nnoremap <silent> vp :10sp<CR><C-w>r:terminal<CR>:set nonumber<CR>i
+nnoremap <silent> vf :tabnew<CR>:terminal<CR>:set nonumber<CR>i
+tnoremap <Esc> <C-\><C-n>
+
