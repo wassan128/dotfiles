@@ -91,3 +91,13 @@ nnoremap <silent> vp :10sp<CR><C-w>r:terminal<CR>:set nonumber<CR>i
 nnoremap <silent> vf :tabnew<CR>:terminal<CR>:set nonumber<CR>i
 tnoremap <Esc> <C-\><C-n>
 
+"" settings for debugger
+autocmd FileType go nmap <silent> ;b :DlvToggleBreakpoint<CR>
+autocmd FileType go nmap <silent> ;t :DlvToggleTracepoint<CR>
+autocmd FileType go nmap <silent> ;c :DlvClearAll<CR>
+autocmd FileType go nmap <silent> ;d :DlvDebug<CR>
+let g:delve_breakpoint_sign="🔴"
+let g:delve_breakpoint_sign_highlight=""
+let g:delve_tracepoint_sign="🔷"
+let g:delve_tracepoint_sign_highlight=""
+

@@ -97,3 +97,7 @@ repo = 'tiagofumo/vim-nerdtree-syntax-highlight'
 
 [[plugins]]
 repo = 'ryanoasis/vim-devicons'
+
+# debugger
+[[plugins]]
+repo = 'sebdah/vim-delve'
