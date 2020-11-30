@@ -101,3 +101,22 @@ repo = 'ryanoasis/vim-devicons'
 # debugger
 [[plugins]]
 repo = 'sebdah/vim-delve'
+
+# snippet
+[[plugins]]
+repo = 'Shougo/deoppet.nvim'
+hook_add = '''
+    imap <C-k>  <Plug>(deoppet_expand)
+    imap <C-f>  <Plug>(deoppet_jump_forward)
+    imap <C-b>  <Plug>(deoppet_jump_backward)
+    smap <C-f>  <Plug>(deoppet_jump_forward)
+    smap <C-b>  <Plug>(deoppet_jump_backward)
+
+    call deoppet#initialize()
+    call deoppet#custom#option('snippets',
+    \ map(globpath(&runtimepath, 'neosnippets', 1, 1),
+    \     "{ 'path': v:val }"))
+'''
+
+[[plugins]]
+repo = 'Shougo/neosnippet-snippets'
