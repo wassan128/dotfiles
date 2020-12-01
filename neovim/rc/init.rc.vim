@@ -89,6 +89,7 @@ nnoremap <silent> [e :LspPreviousError<CR>
 "" setings for terminal emulator
 nnoremap <silent> vp :10sp<CR><C-w>r:terminal<CR>:set nonumber<CR>i
 nnoremap <silent> vf :tabnew<CR>:terminal<CR>:set nonumber<CR>i
+nnoremap <silent> vr :50vs<CR><C-w>r:terminal<CR>:set nonumber<CR>i
 tnoremap <Esc> <C-\><C-n>
 
 "" settings for debugger

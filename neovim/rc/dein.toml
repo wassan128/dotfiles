@@ -76,7 +76,7 @@ repo = 'Shougo/denite.nvim'
 
 # git
 [[plugins]]
-repo = "tpope/vim-fugitive"
+repo = 'iberianpig/tig-explorer.vim'
 
 [[plugins]]
 repo = "airblade/vim-gitgutter"
