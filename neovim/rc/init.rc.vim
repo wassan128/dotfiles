@@ -50,8 +50,8 @@ endfor
 
 " settings for nerdtree
 let NERDTreeWinSize=25
-let NERDTreeShowHidden = 1
-let g:nerdtree_tabs_open_on_console_startup=1
+let NERDTreeShowHidden=1
+let g:nerdtree_tabs_open_on_console_startup=0
 autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTree") && b:NERDTree.isTabTree()) | q | endif
 map <C-x><C-n> :NERDTreeTabsToggle<CR>
 
