@@ -9,3 +9,12 @@ snippet iferr
         exit
     fi
 
+snippet func
+	${1:#:name}() {
+		${0:TARGET}
+	}
+
+snippet stderr
+alias stde
+    echo${1} >&2
+
