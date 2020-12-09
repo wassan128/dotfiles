@@ -1,0 +1,11 @@
+snippet #!
+options head
+	#!/usr/bin/env bash
+	${0}
+
+snippet iferr
+	if [[ "$?" != 0 ]]; then
+		${0:TARGET}
+        exit 1
+	fi
+
