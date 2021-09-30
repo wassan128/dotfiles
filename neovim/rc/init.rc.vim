@@ -1,3 +1,5 @@
+command RN LspRename
+
 " settings for dein.vim
 let s:dein_dir = expand("~/.nvim/cache/dein")
 let s:dein_repo_dir = s:dein_dir."/repos/github.com/Shougo/dein.vim"
@@ -85,12 +87,15 @@ nnoremap <C-k> :LspHover<CR>
 nnoremap <C-i> :LspImplementation<CR>
 nnoremap <silent> ]e :LspNextError<CR>
 nnoremap <silent> [e :LspPreviousError<CR>
+map <C-l> :LspNextError<CR>
 
 "" setings for terminal emulator
 nnoremap <silent> vp :10sp<CR><C-w>r:terminal<CR>:set nonumber<CR>i
 nnoremap <silent> vf :tabnew<CR>:terminal<CR>:set nonumber<CR>i
 nnoremap <silent> vr :50vs<CR><C-w>r:terminal<CR>:set nonumber<CR>i
 tnoremap <Esc> <C-\><C-n>
+
+nnoremap <C-g> :GoImportRun<CR>
 
 "" settings for debugger
 autocmd FileType go nmap <silent> ;b :DlvToggleBreakpoint<CR>
@@ -101,4 +106,7 @@ let g:delve_breakpoint_sign="🔴"
 let g:delve_breakpoint_sign_highlight=""
 let g:delve_tracepoint_sign="🔷"
 let g:delve_tracepoint_sign_highlight=""
+
+set conceallevel=0
+let g:vim_json_syntax_conceal=0
 

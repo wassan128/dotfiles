@@ -4,10 +4,10 @@ add_newline = true
 disabled = true
 
 [character]
-symbol = " `･ω ･´  "
-vicmd_symbol = " ´･ω ･`  "
-style_success = "white bg:#3464b3"
-style_failure = "white bg:#d1544b"
+format = "$symbol ❮ "
+success_symbol = "[ᓚᘏᗢ](green)"
+error_symbol = "[ᓚᘏᗢ](red)"
+vicmd_symbol = "[ᗢᘏᓗ](blue)"
 
 [git_branch]
 style = "green"
