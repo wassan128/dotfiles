@@ -20,3 +20,6 @@ on_ft = 'toml'
 repo = 'mattn/vim-goimports'
 on_ft = 'go'
 
+[[plugins]]
+repo = 'mattn/vim-goimpl'
+on_ft = 'go'

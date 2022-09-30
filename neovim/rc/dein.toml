@@ -44,7 +44,7 @@ repo = 'tpope/vim-surround'
 [[plugins]]
 repo = 'prabirshrestha/vim-lsp'
 hook_add = '''
-  autocmd BufWritePre <buffer> LspDocumentFormatSync
+  autocmd BufWritePost *.js :call system('test -e .eslintrc* && eslint . --fix')|:e
 '''
 
 [[plugins]]
@@ -126,3 +126,6 @@ repo = 'Shougo/neosnippet.vim'
 
 [[plugins]]
 repo = 'Shougo/neosnippet-snippets'
+
+[[plugins]]
+repo = 'hashivim/vim-terraform'

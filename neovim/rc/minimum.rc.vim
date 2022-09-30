@@ -19,3 +19,4 @@ set showmatch
 set fillchars+=vert:\|
 set background=dark
 set t_Co=256
+set mouse=a
